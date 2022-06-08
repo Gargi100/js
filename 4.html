@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action=""
+    >
+<input type="text" name="" id="" maxlength="2">
+<button onclick="func()">Show Grade!</button></form>
+<script>
+    function func(){
+        if(document.getElementsByTagName("input")[0].value=='0'){
+            alert("please enter score > 0");
+        }
+        let score =document.getElementsByTagName("input")[0].value
+        if(score>=21 && score<=35){
+            alert("Your Exam Grade is -D");
+        }
+        if(score<20){
+            alert("Your Exam Grade is E");
+        }
+        if(score>=36 && score<=45){
+            alert("Your Exam Grade is +D");
+        } if(score>=46 && score<=60){
+            alert("Your Exam Grade is -C");
+        } if(score>=61 && score<=70){
+            alert("Your Exam Grade is +C");
+        } if(score>=71 && score<=80){
+            alert("Your Exam Grade is -B");
+        } if(score>=81 && score<=85){
+            alert("Your Exam Grade is +B");
+        } if(score>=86 && score<=90){
+            alert("Your Exam Grade is -A");
+        } if(score>=91){
+            alert("Your Exam Grade is +A");
+        }
+    }
+</script>
+</body>
+</html>

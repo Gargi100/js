@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        form {
+            height: 600px;
+            width: 500px;
+            background-color: rgb(194, 185, 185);
+
+        }
+
+        input {
+            margin-bottom: 5px;
+        }
+    </style>
+</head>
+<body>
+    <form action="">
+        <center>
+            <h2>USER REGISTRATION FORM</h2>
+        </center>
+        FIRST NAME: &emsp;&nbsp;
+        <input type="text" name="first" id="" class="txt"><br>
+        LAST NAME: &emsp;&nbsp;&nbsp;
+        <input type="text" name="last" id=""  class="txt"><br>
+        USER NAME:
+        &emsp; &nbsp;
+        <input type="text" name="user" id=""  class="txt"><br>
+        NUMBER:
+        &emsp; &emsp; &emsp;
+        <input type="text" name="password" id="password" maxlength="10"  class="txt"><br>
+        GENDER: &emsp;&emsp;&emsp;
+        <label for="rad" id="gender">
+            MALE <input type="radio" name="rad" id="male" value="MALE" class="m1"  >
+            FEMALE <input type="radio" name="rad" id="female" value="FEMALE" class="m1">
+        </label><br>
+       <label for="" id="hus" style="display: none;" >
+        HUSBAND: &emsp;  &nbsp; &nbsp;
+        <input type="text" name="" id=""  class="hidden" ><br>
+       </label> 
+       <label for="" id="wife" style="display: none;">
+        WIFE: &emsp;  &emsp;&emsp;&emsp; 
+        <input type="text" name="" id=""  class="hidden"><br>
+       </label>
+        
+        USER TYPE &emsp;  &emsp;<input type="text" name="" id="">
+       <br> ALTERNATE EMAIL <br> ADDRESS: &emsp;  &emsp; &nbsp;
+        <input type="text" name="" id=""  class="txt"><br>
+        ADDRESS 1: &emsp;  &nbsp; &nbsp;
+      <textarea name="" id="" cols="20" rows="3" style="overflow-y: scroll;" class="txtarea"></textarea>
+       <br>
+        COUNTRY: &emsp;  &emsp; &nbsp;
+        <Label for="n" >
+            <select name="" id="" class="dropdwn">
+            <option value="india" name="n" >india</option>
+            <option value="england" name="n">england</option>
+            <option value="france" name="n">france</option></select>
+        </Label><br>
+        STATE:&emsp;  &emsp; &emsp; &emsp;
+        
+            <select value="tamilnadu" name="n"   class="dropdwn">
+            <option value="madhya pradesh" name="n">mp</option>
+            <option value="uttar pradesh" name="n">up</option>
+            <option value="">bengal</option></select>
+        <br>
+        CITY:
+        &emsp;  &emsp; &emsp; &emsp; &nbsp;
+        <Label for="n">
+            <select name="" id=""  class="dropdwn">
+            <option value="pune" name="n">pune</option>
+            <option value="mumbai" name="n">mumbai</option>
+            <option value="banglore" name="n">banglore</option></select>
+        </Label><br>
+        SELECT LANGUAGE:
+        &emsp;
+       ENGLISH <input type="checkbox" name="" id="" value="ENGLISH" class="chckbox" >
+       HINDI <input type="checkbox" name="" id="" value="HINDI" class="chckbox"  >
+        MARATHI<input type="checkbox" name="" id="" value="MARATHI"  class="chckbox" ><br>
+        <br><center>
+            <button class="btn">SUBMIT</button>
+            <button onclick="func()" class="btn">show stats</button>
+        </center>
+        <br class="br">
+    </form>
+<script>
+      let husband =document.getElementById("hus");
+      let wife =document.getElementById("wife");
+   male.addEventListener("click",()=>{
+     husband.style.display='block';
+     wife.style.display='none';
+   })
+  
+   female.addEventListener("click",()=>{
+       wife.style.display='block';
+       husband.style.display='none';
+   })
+   let form = document.getElementsByClassName("m1").length+document.getElementsByClassName("txt").length+document.getElementsByClassName("txtarea").length+
+   document.getElementsByClassName("dropdwn").length+document.getElementsByClassName("chckbox").length+document.getElementsByClassName("hidden").length+document.getElementsByClassName("btn").length;
+   function func(){
+    alert("no.of radio button : "+document.getElementsByClassName("m1").length+'\r\n'+"no.of input text : "+ 
+    document.getElementsByClassName("txt").length+'\r\n'+"no. of textarea"+document.getElementsByClassName("txtarea").length
+    +'\r\n'+"no.of dropdown list"+document.getElementsByClassName("dropdwn").length+'\r\n'+"no. of checkbox"
+    +document.getElementsByClassName("chckbox").length+'\r\n'+"no. of hidden lines"+document.getElementsByClassName("hidden").length
+    +'\r\n'+"no, of buttons"+document.getElementsByClassName("btn").length+'\r\n'+"total no. of controls"+form)
+    
+   }
+  
+</script>
+</body>
+</html>

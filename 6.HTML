@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        th{
+            height: 20px;
+            width: 40px;
+           
+           
+        }
+        td{
+            height: 20px;
+            width: 40px;
+            border: 2px solid rgb(196, 179, 179);
+        }
+       
+    </style>
+</head>
+<body>
+    <center><div><table style="border: 2px solid rgb(205, 197, 197);width: 500px;" >
+        <tr style="background-color: rgb(180, 78, 95);"> 
+            <th class="month" colspan="2"  ></th>
+        <th class="time" colspan="2" ></th>
+        <th class="year" colspan="3"></th></tr>
+        <tr><td>sun</td>
+        <td>mon</td>
+        <td>tues</td>
+        <td>wed</td>
+        <td>thurs</td>
+        <td>fri</td>
+        <td>sat</td></tr>
+        <tr><td>1</td>
+        <td class="t1">2</td>
+        <td>3</td>
+        <td>4</td>
+        <td>5</td>
+        <td>6</td>
+        <td>7</td></tr>
+        <tr><td>8</td>
+        <td>9</td>
+        <td>10</td>
+        <td>11</td>
+        <td>12</td>
+        <td>13</td>
+        <td>14</td></tr>
+        <tr><td>15</td>
+        <td>16</td>
+        <td>17</td>
+        <td>18</td>
+        <td>19</td>
+        <td>20</td>
+        <td>21</td></tr>
+        <tr><td>22</td>
+        <td>23</td>
+        <td>24</td>
+        <td>25</td>
+        <td>26</td>
+        <td>27</td>
+        <td>28</td></tr>
+        <tr><td>29</td>
+        <td>30</td>
+        <td>31</td>
+        </tr>
+    </table></div></center>
+    <script>
+       const d = new Date();
+       const mon= ['jan','feb','mar','apr','may','jun','jul','aug','sep','oct','nov','dec'];
+       
+       document.getElementsByClassName("month")[0].innerHTML=mon[d.getMonth()];
+       document.getElementsByClassName("time")[0].innerHTML=d.getHours()+":"+d.getMinutes()+":"+d.getSeconds();
+       document.getElementsByClassName("year")[0].innerHTML=d.getFullYear();
+       
+       let day=d.getDate();
+       
+       for(let i =0;i<=38;i++){ 
+       if(document.getElementsByTagName("td")[8].innerHTML==day){
+           
+           document.getElementsByTagName("td")[8].style.backgroundColor='grey';
+       }}
+    </script>
+</body>
+</html>

@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        select{
+            color: black;
+        }
+        select{
+            width: 150px;
+        }
+        div :nth-child(even){
+color: rgb(241, 55, 55);
+display: inline-block;
+        }
+        div :nth-child(odd){
+color: rgb(47, 50, 243);
+display: inline-block;
+        }
+        
+    </style>
+</head>
+
+<body >
+   <div><div> Movement Score 1:</div>
+    <select name="" id="s1">
+        <option value="">0</option>
+        <option value="">1</option>
+        <option value="">2</option>
+        <option value="">3</option>
+        <option value="">4</option>
+        <option value="">5</option>
+        <option value="">6</option>
+        <option value="">7</option>
+        <option value="">8</option>
+        <option value="">9</option>
+    </select><br>
+   <div> Movement Score 2: </div><select name="" id="s2">
+    <option value="">0</option>
+    <option value="">1</option>
+    <option value="">2</option>
+    <option value="">3</option>
+    <option value="">4</option>
+    <option value="">5</option>
+    <option value="">6</option>
+    <option value="">7</option>
+    <option value="">8</option>
+    <option value="">9</option>
+    </select><br>
+   <div> Movement Score 3:</div> <select name="" id="s3">
+    <option value="">0</option>
+    <option value="">1</option>
+    <option value="">2</option>
+    <option value="">3</option>
+    <option value="">4</option>
+    <option value="">5</option>
+    <option value="">6</option>
+    <option value="">7</option>
+    <option value="">8</option>
+    <option value="">9</option>
+    </select><br>
+   <div> Movement Score 4: </div> <select name="" id="s4">
+    <option value="">0</option>
+    <option value="">1</option>
+    <option value="">2</option>
+    <option value="">3</option>
+    <option value="">4</option>
+    <option value="">5</option>
+    <option value="">6</option>
+    <option value="">7</option>
+    <option value="">8</option>
+    <option value="">9</option>
+    </select><br>
+   <div> Movement Score 5: </div> <select name="" id="s5">
+    <option value="">0</option>
+    <option value="">1</option>
+    <option value="">2</option>
+    <option value="">3</option>
+    <option value="">4</option>
+    <option value="">5</option>
+    <option value="">6</option>
+    <option value="">7</option>
+    <option value="">8</option>
+    <option value="">9</option>
+    </select><br>
+   <div> Movement Score 6:</div> <select name="" id="s6">
+    <option value="">0</option>
+    <option value="">1</option>
+    <option value="">2</option>
+    <option value="">3</option>
+    <option value="">4</option>
+    <option value="">5</option>
+    <option value="">6</option>
+    <option value="">7</option>
+    <option value="">8</option>
+    <option value="">9</option>
+    </select><br>
+   <div> Movement Score 7:</div>  <select name="" id="s7">
+    <option value="">0</option>
+    <option value="">1</option>
+    <option value="">2</option>
+    <option value="">3</option>
+    <option value="">4</option>
+    <option value="">5</option>
+    <option value="">6</option>
+    <option value="">7</option>
+    <option value="">8</option>
+    <option value="">9</option>
+    </select><br>
+    <div>Movement Score 8:</div>  <select name="" id="s8" style="width: 150px; ">
+        <option value="">0</option>
+        <option value="">1</option>
+        <option value="">2</option>
+        <option value="">3</option>
+        <option value="">4</option>
+        <option value="">5</option>
+        <option value="">6</option>
+        <option value="">7</option>
+        <option value="">8</option>
+        <option value="">9</option>
+       
+    </select></div>
+    <button onclick="func()">total</button><br><br><br>
+    <span style="color: rgb(244, 61, 219);font-weight: bolder;font-size: larger;"></span>
+    <script>
+function func(){
+    let total =document.getElementsByTagName("select")[0].selectedIndex+document.getElementsByTagName("select")[1].selectedIndex
+    +document.getElementsByTagName("select")[2].selectedIndex+document.getElementsByTagName("select")[3].selectedIndex
+    +document.getElementsByTagName("select")[4].selectedIndex
+    +document.getElementsByTagName("select")[5].selectedIndex+document.getElementsByTagName("select")[6].selectedIndex
+    +document.getElementsByTagName("select")[7].selectedIndex
+    
+    if(total>=0 && total<=20){
+        alert("No Movement")
+    }
+    if(total>=21 && total<=40){
+        alert(" Movement is slow")
+    }
+    if(total>=41 && total<=60){
+        alert(" Movement is moderate")
+    }
+    if(total>=61 && total<=80){
+        alert("Movement is good")
+    }
+    document.getElementsByTagName("span")[0].innerHTML=total;
+}
+    </script>
+</body>
+
+</html>

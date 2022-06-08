@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <span style="color: blue;font-size: 21px;">Select Interval:</span>
+    <select name="" id="">
+        <option value="" class="op">2</option>
+        <option value="" class="op">3</option>
+        <option value="" class="op">5</option>
+        <option value="" class="op">10</option>
+    </select> <br><br><br>
+    <button onclick="func()">Show Time</button>
+    <br>
+    <div style="color: red;font-size: 40px;"></div>
+    <script>
+    
+    
+    let d = new Date();
+    
+        function func(){
+            for(let i =0;i<=3;i++){
+               let select= document.getElementsByTagName("option")[i].value
+               alert(select)
+               if(select.nodeValue==2){
+                alert("aasdfa")
+                break
+               }
+            }
+            alert(selt)
+            // setInterval(()=>{
+            //     document.getElementsByTagName('div')[0].innerHTML+=d.getHours()+":"+d.getMinutes()+":"+d.getSeconds();
+            // },1000*select)
+            
+            // document.getElementsByTagName('div')[0].innerHTML=d.getHours()+":"+d.getMinutes()+":"+d.getSeconds();
+        }
+    </script>
+</body>
+
+</html>

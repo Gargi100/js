@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table {
+            border: 2px solid rgb(186, 183, 183);
+            
+        }
+  td{
+    border: 2px solid rgb(186, 183, 183);
+    text-align: center;
+            
+  }
+        th {
+            width: 150px;
+            text-align: center;
+           
+          
+        }
+       
+    </style>
+</head>
+<body>
+    <table>
+        <tr style="border: 2px solid  rgb(186, 183, 183) ;">
+            <th>Progress bar width</th>
+            <th>Increment unit(px)</th>
+            <th>Time Interval(sec)</th>
+        </tr>
+        <tr><td><code>
+            <select name="" id="">
+                <option value="" class="up">300</option>
+                <option value="" class="up">400</option>
+                <option value="" class="up">500</option>
+                <option value="" class="up">600</option>
+            </select>
+        </code>
+        </td>
+        <td><code>
+            <select name="" id=""  >
+                <option value="" class="mid">5</option>
+                <option value="" class="mid">10</option>
+                <option value="" class="mid">20</option>
+                <option value="" class="mid">25</option>
+            </select>
+        </code>
+        </td>
+        <td><code>
+            <select name="" id="">
+                <option value="" class="op">1</option>
+                <option value="" class="op">2</option>
+                <option value="" class="op">3</option>
+                <option value="" class="op">4</option>
+            </select>
+        </code>
+        </td>
+        
+        </tr>
+    </table><br><br><br>
+    
+    <progress style="width: 350px;height: 25px;border-radius: 0px;"  max="600" value="40"></progress>
+      <br><br>
+    <button onclick="func()">Show Progress</button>
+    <script>
+      
+        function func(){
+            for(let i =0;i<=11;i++){
+                if(document.getElementsByTagName("option")[i].selected==true){
+                    document.getElementsByTagName("progress")[0].max=document.getElementsByClassName("up")[i].selected;
+//                     setInterval(function(){
+                      
+// },)
+                }
+
+                
+            }
+            // let num= document.getElementsByTagName("select")[3].selectedIndex;
+            // document.getElementsByTagName("progress")[0].max=document.getElementsByTagName("select")[0].selectedIndex;
+          
+           // document.getElementsByTagName("progress")[0].value=document.getElementsByTagName("select")[1].selectedIndex;
+           // document.getElementsByTagName("progress")[0].value=document.getElementsByTagName("select")[2].selectedIndex;
+        }
+    </script>
+</body>
+</html>
